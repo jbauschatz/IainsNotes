@@ -14,6 +14,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { PrepositionAir } from './app/grammar/preposition/preposition-air';
 import { IdiomItIsInMe } from './app/idiom/idiom-it-is-in-me';
 import { IdiomIAmInMy } from './app/idiom/idiom-i-am-in-my';
+import { IdiomItOnInMe } from './app/idiom/idiom-it-is-on-me';
 
 function Home() {
   return <Container>
@@ -59,6 +60,11 @@ function Home() {
       <p>
         <ul>
           <li>
+            <LinkContainer to="/idiom/ItIsOnMe">
+              <a>Tha an t-acras orm (The hunger is upon me)</a>
+            </LinkContainer>
+          </li>
+          <li>
             <LinkContainer to="/idiom/IAmInMy">
               <a>Tha mi nam thidsear (I am in my teacher)</a>
             </LinkContainer>
@@ -101,6 +107,7 @@ function App() {
 
             {/* Idioms */}
             <Route path="/idiom/ItIsInMe" element={<IdiomItIsInMe/>}/>
+            <Route path="/idiom/ItIsOnMe" element={<IdiomItOnInMe/>}/>
             <Route path="/idiom/IAmInMy" element={<IdiomIAmInMy/>}/>
         </Routes>
     </Router>

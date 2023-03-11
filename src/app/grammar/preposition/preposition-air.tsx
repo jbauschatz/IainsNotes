@@ -53,6 +53,17 @@ export function PrepositionAir(props: {}) {
             ></PronounTable>
         </p>
 
+        <h2>Related Idioms</h2>
+        <p>
+            <ul>
+                <li>
+                    <LinkContainer to="/idiom/ItIsOnMe">
+                        <a>Tha an t-acras orm (The hunger is upon me)</a>
+                    </LinkContainer>
+                </li>
+            </ul>
+        </p>
+
         <h2>References</h2>
         <p>
             <ul>
