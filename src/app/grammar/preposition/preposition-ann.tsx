@@ -57,6 +57,11 @@ export function PrepositionAnn(props: {}) {
         <p>
             <ul>
                 <li>
+                    <LinkContainer to="/idiom/ThaGaolAgamOrt">
+                        <a>Tha gaol agam ort (My love is upon you)</a>
+                    </LinkContainer>
+                </li>
+                <li>
                     <LinkContainer to="/idiom/IAmInMy">
                         <a>Tha mi nam thidsear (I am in my teacher)</a>
                     </LinkContainer>

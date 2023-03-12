@@ -15,6 +15,8 @@ import { PrepositionAir } from './app/grammar/preposition/preposition-air';
 import { IdiomItIsInMe } from './app/idiom/idiom-it-is-in-me';
 import { IdiomIAmInMy } from './app/idiom/idiom-i-am-in-my';
 import { IdiomItOnInMe } from './app/idiom/idiom-it-is-on-me';
+import { IdiomMyLoveOnYou } from './app/idiom/idiom-my-love-on-you';
+import { PrepositionAig } from './app/grammar/preposition/preposition-aig';
 
 function Home() {
   return <Container>
@@ -39,6 +41,11 @@ function Home() {
       <h2>Prepositions</h2>
       <ul>
         <li>
+          <LinkContainer to="/grammar/preposition/aig(at)">
+            <a>aig (at)</a>
+          </LinkContainer>
+        </li>
+        <li>
           <LinkContainer to="/grammar/preposition/air(on)">
             <a>air (on)</a>
           </LinkContainer>
@@ -62,6 +69,11 @@ function Home() {
           <li>
             <LinkContainer to="/idiom/ItIsOnMe">
               <a>Tha an t-acras orm (The hunger is upon me)</a>
+            </LinkContainer>
+          </li>
+          <li>
+            <LinkContainer to="/idiom/ThaGaolAgamOrt">
+              <a>Tha gaol agam ort (My love is upon you)</a>
             </LinkContainer>
           </li>
           <li>
@@ -102,13 +114,15 @@ function App() {
             <Route path="/" element={<Home/>}/>
 
             {/* Grammar Pages */}
-            <Route path="/grammar/preposition/ann(in)" element={<PrepositionAnn/>}/>
+            <Route path="/grammar/preposition/aig(at)" element={<PrepositionAig/>}/>
             <Route path="/grammar/preposition/air(on)" element={<PrepositionAir/>}/>
+            <Route path="/grammar/preposition/ann(in)" element={<PrepositionAnn/>}/>
 
             {/* Idioms */}
             <Route path="/idiom/ItIsInMe" element={<IdiomItIsInMe/>}/>
             <Route path="/idiom/ItIsOnMe" element={<IdiomItOnInMe/>}/>
             <Route path="/idiom/IAmInMy" element={<IdiomIAmInMy/>}/>
+            <Route path="/idiom/ThaGaolAgamOrt" element={<IdiomMyLoveOnYou/>}/>
         </Routes>
     </Router>
   );

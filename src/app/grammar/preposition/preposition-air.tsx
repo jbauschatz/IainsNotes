@@ -57,8 +57,18 @@ export function PrepositionAir(props: {}) {
         <p>
             <ul>
                 <li>
+                    <LinkContainer to="/idiom/ThaGaolAgamOrt">
+                        <a>Tha gaol agam ort (My love is upon you)</a>
+                    </LinkContainer>
+                </li>
+                <li>
                     <LinkContainer to="/idiom/ItIsOnMe">
                         <a>Tha an t-acras orm (The hunger is upon me)</a>
+                    </LinkContainer>
+                </li>
+                <li>
+                    <LinkContainer to="/idiom/ThaGaolAgamOrt">
+                        <a>Tha gaol agam ort (My love is upon you)</a>
                     </LinkContainer>
                 </li>
             </ul>
