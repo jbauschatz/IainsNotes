@@ -29,21 +29,21 @@ export function PronounTable(props: PronounTableProps) {
         <tbody>
             <tr>
                 <th>1st</th>
-                <td>{props.firstS}</td>
-                <td>{props.firstP}</td>
+                <td className="gaelic">{props.firstS}</td>
+                <td className="gaelic">{props.firstP}</td>
             </tr>
             <tr>
                 <th>2nd</th>
-                <td>{props.secondS}</td>
-                <td>{props.secondP}</td>
+                <td className="gaelic">{props.secondS}</td>
+                <td className="gaelic">{props.secondP}</td>
             </tr>
             <tr>
                 <th rowSpan={2}>3rd</th>
-                <td>{props.thirdMS}</td>
-                <td rowSpan={2}>{props.thirdP}</td>
+                <td className="gaelic">{props.thirdMS}</td>
+                <td rowSpan={2} className="gaelic">{props.thirdP}</td>
             </tr>
             <tr>
-                <td>{props.thirdFS}</td>
+                <td className="gaelic">{props.thirdFS}</td>
             </tr>
         </tbody>
     </Table>

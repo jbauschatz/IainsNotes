@@ -1,4 +1,8 @@
 
-.gaelic-inline {
+.gaelic {
+  /* color: green; */
+}
+
+.gaelic.inline {
   font-style: italic;
 }
