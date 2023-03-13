@@ -20,6 +20,13 @@ export function IdiomItIsInMe() {
                 For example rather than saying you <em>are</em> a teacher, you say it's a teacher that is <em>in</em> you.
             </p>
             <p>
+                <Example
+                    gaelic="'S e tidsear a th' ann an Anna"
+                    english="Anna is a teacher"
+                    englishLiteral="It's a teacher that's in Anna"
+                ></Example>
+            </p>
+            <p>
                 <ol>
                     <li>Begin with <GD><strong>'s e</strong></GD> (because you are equating two nouns)</li>
                     <li>Next is the noun representing the identity or occupation, for example <GD><strong>tidsear</strong></GD></li>
