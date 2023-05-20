@@ -51,8 +51,8 @@ export function IdiomMyLoveOnYou() {
                 <Examples>
                     <Example
                         gaelic="Tha gràin aig Anna air Calum"
-                        english="Anna loves Calum"
-                        englishLiteral="Anna's love is on Calum"
+                        english="Anna hates Calum"
+                        englishLiteral="Anna's hatred is on Calum"
                     ></Example>
                 </Examples>
             </p>
@@ -77,12 +77,12 @@ export function IdiomMyLoveOnYou() {
                     <Example
                         gaelic="Bha gràin aig Calum air"
                         english="Calum hated it"
-                        englishLiteral="Calum's hate was on it"
+                        englishLiteral="Calum's hatered was on it"
                     ></Example>
                     <Example
                         gaelic="Bha gràin againn air an fhilm"
                         english="We hated the film"
-                        englishLiteral="Our hate was on the film"
+                        englishLiteral="Our hatered was on the film"
                     ></Example>
                 </Examples>
             </p>
