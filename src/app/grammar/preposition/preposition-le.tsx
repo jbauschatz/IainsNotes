@@ -2,13 +2,34 @@ import { Container } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { GD } from "../../component/inline/inline-helper-gd";
 import { PronounTable } from "../../component/pronoun-table";
+import { Examples } from "../../component/example/examples";
+import { Example } from "../../component/example/example";
 
 export function PrepositionLe(props: {}) {
 
     return <Container>
         <h1>le (with, by)</h1>
         <p>
-            This preposition means with or sometimes by.
+            This preposition means "with", or sometimes "by".
+        </p>
+        <p>
+            When used with an indefinite noun the form is <GD>le</GD>, and when used with a definite noun is <GD>leis</GD>.
+        </p>
+        <p>
+            <Examples>
+                <Example
+                    gaelic="le cù"
+                    english="with a dog"
+                ></Example>
+                <Example
+                    gaelic="leis a' chù"
+                    english="with the dog"
+                ></Example>
+                <Example
+                    gaelic="leis na coin"
+                    english="with the dogs"
+                ></Example>
+            </Examples>
         </p>
 
         <h2>Pronominal Forms</h2>
