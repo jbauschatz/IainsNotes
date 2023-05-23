@@ -66,6 +66,11 @@ export function PrepositionAir(props: {}) {
                         <a>Tha an t-acras orm (The hunger is upon me)</a>
                     </LinkContainer>
                 </li>
+                <li>
+                    <LinkContainer to="/idiom/KeenOn">
+                        <a>dèidheil air (keen on)</a>
+                    </LinkContainer>
+                </li>
             </ul>
         </p>
 

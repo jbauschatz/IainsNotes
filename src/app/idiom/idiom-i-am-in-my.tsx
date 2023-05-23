@@ -20,6 +20,13 @@ export function IdiomIAmInMy() {
                 For example rather than saying you <em>are</em> a teacher, you say that you are <em>in your teacher</em>.
             </p>
             <p>
+                <Example
+                    gaelic="Tha mi nam thidsear"
+                    english="I am a teacher"
+                    englishLiteral="I am in my teacher"
+                ></Example>
+            </p>
+            <p>
                 <ol>
                     <li>Begin with some form of <GD><strong>bi</strong></GD>, for example <GD><strong>tha</strong></GD></li>
                     <li>Next is the entity being described, for example <GD><strong>mi</strong></GD></li>

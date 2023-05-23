@@ -18,6 +18,7 @@ import { IdiomItOnInMe } from './app/idiom/idiom-it-is-on-me';
 import { IdiomMyLoveOnYou } from './app/idiom/idiom-my-love-on-you';
 import { PrepositionAig } from './app/grammar/preposition/preposition-aig';
 import { IdiomStativeVerb } from './app/idiom/idiom-stative-verb';
+import { IdiomKeenOn } from './app/idiom/idiom-keen-on';
 
 function Home() {
   return <Container>
@@ -92,6 +93,43 @@ function Home() {
               <a>'S e tidsear a th' annam (It's a teacher that is in me)</a>
             </LinkContainer>
           </li>
+          <li>
+            <LinkContainer to="/idiom/KeenOn">
+              <a>dèidheil air (keen on)</a>
+            </LinkContainer>
+          </li>
+        </ul>
+      </p>
+
+      <h3>Idioms for Liking or Preferring</h3>
+      <p>
+        <ul>
+          <li>
+            <LinkContainer to="/idiom/ThaGaolAgamOrt">
+              <a>Tha gaol agam ort (My love is upon you)</a>
+            </LinkContainer>
+          </li>
+          <li>
+            <LinkContainer to="/idiom/KeenOn">
+              <a>dèidheil air (keen on)</a>
+            </LinkContainer>
+          </li>
+        </ul>
+      </p>
+      
+      <h3>Idioms for State or Condition</h3>
+      <p>
+        <ul>
+          <li>
+            <LinkContainer to="/idiom/ItIsOnMe">
+              <a>Tha an t-acras orm (The hunger is upon me)</a>
+            </LinkContainer>
+          </li>
+          <li>
+            <LinkContainer to="/idiom/ThaMiNamChadal">
+              <a>Tha mi nam chadal (I am in my sleeping)</a>
+            </LinkContainer>
+          </li>
         </ul>
       </p>
   </Container>
@@ -130,6 +168,7 @@ function App() {
             <Route path="/idiom/IAmInMy" element={<IdiomIAmInMy/>}/>
             <Route path="/idiom/ThaMiNamChadal" element={<IdiomStativeVerb/>}/>
             <Route path="/idiom/ThaGaolAgamOrt" element={<IdiomMyLoveOnYou/>}/>
+            <Route path="/idiom/KeenOn" element={<IdiomKeenOn/>}/>
         </Routes>
     </Router>
   );
