@@ -19,6 +19,8 @@ import { IdiomMyLoveOnYou } from './app/idiom/idiom-my-love-on-you';
 import { PrepositionAig } from './app/grammar/preposition/preposition-aig';
 import { IdiomStativeVerb } from './app/idiom/idiom-stative-verb';
 import { IdiomKeenOn } from './app/idiom/idiom-keen-on';
+import { IdiomPrefersIsFhearrLe } from './app/idiom/idiom-prefers-is-fhearr-le';
+import { PrepositionLe } from './app/grammar/preposition/preposition-le';
 
 function Home() {
   return <Container>
@@ -55,6 +57,11 @@ function Home() {
         <li>
           <LinkContainer to="/grammar/preposition/ann(in)">
             <a>ann (in)</a>
+          </LinkContainer>
+        </li>
+        <li>
+          <LinkContainer to="/grammar/preposition/le(with)">
+            <a>le (with, by)</a>
           </LinkContainer>
         </li>
       </ul>
@@ -98,6 +105,11 @@ function Home() {
               <a>dèidheil air (keen on)</a>
             </LinkContainer>
           </li>
+          <li>
+            <LinkContainer to="/idiom/IsFhearrLePrefers">
+              <a>is fheàrr le (prefers)</a>
+            </LinkContainer>
+          </li>
         </ul>
       </p>
 
@@ -112,6 +124,11 @@ function Home() {
           <li>
             <LinkContainer to="/idiom/KeenOn">
               <a>dèidheil air (keen on)</a>
+            </LinkContainer>
+          </li>
+          <li>
+            <LinkContainer to="/idiom/IsFhearrLePrefers">
+              <a>is fheàrr le (prefers)</a>
             </LinkContainer>
           </li>
         </ul>
@@ -161,6 +178,7 @@ function App() {
             <Route path="/grammar/preposition/aig(at)" element={<PrepositionAig/>}/>
             <Route path="/grammar/preposition/air(on)" element={<PrepositionAir/>}/>
             <Route path="/grammar/preposition/ann(in)" element={<PrepositionAnn/>}/>
+            <Route path="/grammar/preposition/le(with)" element={<PrepositionLe/>}/>
 
             {/* Idioms */}
             <Route path="/idiom/ItIsInMe" element={<IdiomItIsInMe/>}/>
@@ -169,6 +187,7 @@ function App() {
             <Route path="/idiom/ThaMiNamChadal" element={<IdiomStativeVerb/>}/>
             <Route path="/idiom/ThaGaolAgamOrt" element={<IdiomMyLoveOnYou/>}/>
             <Route path="/idiom/KeenOn" element={<IdiomKeenOn/>}/>
+            <Route path="/idiom/IsFhearrLePrefers" element={<IdiomPrefersIsFhearrLe/>}/>
         </Routes>
     </Router>
   );
