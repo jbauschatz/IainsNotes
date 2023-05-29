@@ -5,6 +5,7 @@ import { buildPrepositionPath } from "../../page-util";
 import { NavItem } from "../../component/navigation/nav-item";
 import { NavList } from "../../component/navigation/nav-list";
 import { IdiomMyLoveIsOnNavItem } from "../../idiom/idiom-my-love-on-you";
+import { ExternalLink } from "../../component/navigation/external-link";
 
 export const PREPOSITION_AIG_RESOURCE_PATH = buildPrepositionPath('aig(at)');
 
@@ -79,13 +80,11 @@ export function PrepositionAig(props: {}) {
 
         <h2>References</h2>
         <p>
-            <ul>
-                <li>
-                    <a href="https://gaelicgrammar.org/~gaelic/mediawiki/index.php/Aig_(preposition)" target="_blank" rel="noopener noreferrer">
-                        Scottish Gaelic Grammar Wiki
-                    </a>
-                </li>
-            </ul>
+            <NavList>
+                <ExternalLink to="https://gaelicgrammar.org/~gaelic/mediawiki/index.php/Aig_(preposition)">
+                    Scottish Gaelic Grammar Wiki - Aig (preposition)
+                </ExternalLink>
+            </NavList>
         </p>
     </Container>
 }

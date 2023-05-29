@@ -7,6 +7,7 @@ import { IdiomIamInMyNavItem } from "../../idiom/idiom-i-am-in-my";
 import { IdiomStativeVerbNavItem } from "../../idiom/idiom-stative-verb";
 import { IdiomItIsInMeNavItem } from "../../idiom/idiom-it-is-in-me";
 import { NavList } from "../../component/navigation/nav-list";
+import { ExternalLink } from "../../component/navigation/external-link";
 
 export const PREPOSITION_ANN_RESOURCE_PATH = buildPrepositionPath('ann(in)');
 
@@ -83,13 +84,11 @@ export function PrepositionAnn(props: {}) {
 
         <h2>References</h2>
         <p>
-            <ul>
-                <li>
-                    <a href="https://gaelicgrammar.org/~gaelic/mediawiki/index.php/Ann_(preposition)" target="_blank" rel="noopener noreferrer">
-                        Scottish Gaelic Grammar Wiki
-                    </a>
-                </li>
-            </ul>
+            <NavList>
+                <ExternalLink to="https://gaelicgrammar.org/~gaelic/mediawiki/index.php/Ann_(preposition)">
+                    Scottish Gaelic Grammar Wiki - Ann (preposition)
+                </ExternalLink>
+            </NavList>
         </p>
     </Container>
 }

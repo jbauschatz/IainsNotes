@@ -6,6 +6,8 @@ import { GD } from '../component/inline/inline-helper-gd';
 import { buildIdiomPath } from '../page-util';
 import { NavItem } from '../component/navigation/nav-item';
 import { PrepositionAirInlineNav } from '../grammar/preposition/preposition-air';
+import { NavList } from '../component/navigation/nav-list';
+import { ExternalLink } from '../component/navigation/external-link';
 
 export const IDIOM_IT_IS_ON_ME_RESOURCE_PATH = buildIdiomPath('tha_an_tacras_orm');
 
@@ -119,13 +121,11 @@ export function IdiomItIsOnMe() {
             
             <h2>References</h2>
             <p>
-                <ul>
-                    <li>
-                        <a href="https://speakgaelic.scot/level/food-drink/topic/feumalachdan-bidh/section/tha-an-t-acras-orm/" target="_blank" rel="noopener noreferrer">
-                            Speak Gaelic
-                        </a>
-                    </li>
-                </ul>
+                <NavList>
+                    <ExternalLink to="https://speakgaelic.scot/level/food-drink/topic/feumalachdan-bidh/section/tha-an-t-acras-orm/">
+                        Speak Gaelic - Tha an t-acras orm!
+                    </ExternalLink>
+                </NavList>
             </p>
         </Row>
     </Container>

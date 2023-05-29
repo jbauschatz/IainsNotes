@@ -7,6 +7,7 @@ import { buildPrepositionPath } from "../../page-util";
 import { NavItem } from "../../component/navigation/nav-item";
 import { NavList } from "../../component/navigation/nav-list";
 import { IdiomPrefersIsFhearrLeNavItem } from "../../idiom/idiom-prefers-is-fhearr-le";
+import { ExternalLink } from "../../component/navigation/external-link";
 
 export const PREPOSITION_LE_RESOURCE_PATH = buildPrepositionPath('le(with)');
 
@@ -103,13 +104,11 @@ export function PrepositionLe(props: {}) {
 
         <h2>References</h2>
         <p>
-            <ul>
-                <li>
-                    <a href="https://gaelicgrammar.org/~gaelic/mediawiki/index.php/Le_(preposition)" target="_blank" rel="noopener noreferrer">
-                        Scottish Gaelic Grammar Wiki - le (preposition)
-                    </a>
-                </li>
-            </ul>
+            <NavList>
+                <ExternalLink to="https://gaelicgrammar.org/~gaelic/mediawiki/index.php/Le_(preposition)">
+                    Scottish Gaelic Grammar Wiki - Le (preposition)
+                </ExternalLink>
+            </NavList>
         </p>
     </Container>
 }

@@ -7,6 +7,7 @@ import { NavList } from "../../component/navigation/nav-list";
 import { IdiomMyLoveIsOnNavItem } from "../../idiom/idiom-my-love-on-you";
 import { IdiomItIsOnMeNavItem } from "../../idiom/idiom-it-is-on-me";
 import { IdiomKeenOnNavItem } from "../../idiom/idiom-keen-on";
+import { ExternalLink } from "../../component/navigation/external-link";
 
 export const PREPOSITION_AIR_RESOURCE_PATH = buildPrepositionPath('air(on)');
 
@@ -83,13 +84,11 @@ export function PrepositionAir(props: {}) {
 
         <h2>References</h2>
         <p>
-            <ul>
-                <li>
-                    <a href="https://gaelicgrammar.org/~gaelic/mediawiki/index.php/Air_(preposition)" target="_blank" rel="noopener noreferrer">
-                        Scottish Gaelic Grammar Wiki
-                    </a>
-                </li>
-            </ul>
+            <NavList>
+                <ExternalLink to="https://gaelicgrammar.org/~gaelic/mediawiki/index.php/Air_(preposition)">
+                    Scottish Gaelic Grammar Wiki - Air (preposition)
+                </ExternalLink>
+            </NavList>
         </p>
     </Container>
 }

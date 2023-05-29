@@ -6,6 +6,8 @@ import { GD } from '../component/inline/inline-helper-gd';
 import { buildIdiomPath } from '../page-util';
 import { NavItem } from '../component/navigation/nav-item';
 import { PrepositionAnnInlineNav } from '../grammar/preposition/preposition-ann';
+import { ExternalLink } from '../component/navigation/external-link';
+import { NavList } from '../component/navigation/nav-list';
 
 export const IDIOM_STATIVE_VERB_RESOURCE_PATH = buildIdiomPath('tha_mi_nam_chadal');
 
@@ -61,23 +63,17 @@ export function IdiomStativeVerb() {
             
             <h2>References</h2>
             <p>
-                <ul>
-                    <li>
-                        <a href="https://speakgaelic.scot/level/pastimes/topic/air-splaoid-no-aig-fois/" target="_blank" rel="noopener noreferrer">
-                            Speak Gaelic - Hobbies
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://gaelicgrammar.org/~gaelic/mediawiki/index.php/Statives" target="_blank" rel="noopener noreferrer">
-                            Scottish Gaelic Grammar Wiki - Statives
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.akerbeltz.org/index.php?title=Stative_Verbs_or_How_to_run_in_suspended_animation" target="_blank" rel="noopener noreferrer">
-                            Akerbeltz - Stative Verbs or How to run in suspended animation
-                        </a>
-                    </li>
-                </ul>
+                <NavList>
+                    <ExternalLink to="https://speakgaelic.scot/level/pastimes/topic/air-splaoid-no-aig-fois/">
+                        Speak Gaelic - Hobbies
+                    </ExternalLink>
+                    <ExternalLink to="https://gaelicgrammar.org/~gaelic/mediawiki/index.php/Statives">
+                        Scottish Gaelic Grammar Wiki - Statives
+                    </ExternalLink>
+                    <ExternalLink to="http://www.akerbeltz.org/index.php?title=Stative_Verbs_or_How_to_run_in_suspended_animation">
+                        Akerbeltz - Stative Verbs or How to run in suspended animation
+                    </ExternalLink>
+                </NavList>
             </p>
         </Row>
     </Container>
