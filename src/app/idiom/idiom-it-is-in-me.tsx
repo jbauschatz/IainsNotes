@@ -13,7 +13,7 @@ export const IDIOM_IT_IS_IN_ME_RESOURCE_PATH = buildIdiomPath('s_e_tidsear_a_th_
 
 export function IdiomItIsInMeNavItem() {
     return <NavItem to={IDIOM_IT_IS_IN_ME_RESOURCE_PATH}>
-        'S e tidsear a th' annam (I am a teacher)
+        'S e tidsear a th' annam (It's a teacher that's in me)
     </NavItem>
 }
 
@@ -24,7 +24,7 @@ export function IdiomItIsInMeNavItem() {
 export function IdiomItIsInMe() {
     return <Container>
         <Row>
-            <h1>'S e tidsear a th' annam (I am a teacher)</h1>
+            <h1>'S e tidsear a th' annam (It's a teacher that's in me)</h1>
             <p>One idiom for expressing something's identity or occupation combines <GD>'s e</GD> with <PrepositionAnnInlineNav/>.
                 For example rather than saying you <em>are</em> a teacher, you say it's a teacher that is <em>in</em> you.
             </p>
