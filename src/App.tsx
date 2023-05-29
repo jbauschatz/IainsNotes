@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMugHot } from '@fortawesome/free-solid-svg-icons'
 
 import {
   HashRouter as Router,
@@ -96,7 +98,11 @@ function App() {
       <Navbar bg="dark" variant="dark" expand="lg">
           <Container>
               <LinkContainer to="/">
-                  <Navbar.Brand>Iain Teàrlach's Notes</Navbar.Brand>
+                  <Navbar.Brand>
+                    <FontAwesomeIcon icon={faMugHot} />
+                    {' '}
+                    Iain Teàrlach's Notes
+                  </Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
