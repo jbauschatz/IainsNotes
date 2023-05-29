@@ -57,9 +57,9 @@ export function IdiomMyLoveIsOn() {
                 </Examples>
                 <Examples>
                     <Example
-                        gaelic="Tha gràin aig Anna air Calum"
-                        english="Anna hates Calum"
-                        englishLiteral="Anna's hatred is on Calum"
+                        gaelic="Tha gaol aig Iain air tì"
+                        english="Iain loves tea"
+                        englishLiteral="Iain's love is on tea"
                     ></Example>
                 </Examples>
             </p>
@@ -77,6 +77,47 @@ export function IdiomMyLoveIsOn() {
                         englishLiteral="Their love is on us"
                     ></Example>
                     <Example
+                        gaelic="Bha gaol aig Calum air"
+                        english="Calum loved it"
+                        englishLiteral="Calum's love was on it"
+                    ></Example>
+                    <Example
+                        gaelic="Bha gaol againn air an fhilm"
+                        english="We loved the film"
+                        englishLiteral="Our love was on the film"
+                    ></Example>
+                </Examples>
+            </p>
+
+            <h2>Other Examples</h2>
+            <p>
+                Here are some other emotions, feelings, or effects that this grammatical structure applies to.
+            </p>
+
+            <h3>
+                gràdh (love)
+            </h3>
+            <p>
+                <Examples>
+                    <Example
+                        gaelic="Tha gràdh aig Iain air cofaidh"
+                        english="Iain loves coffee"
+                        englishLiteral="Iain's love is on coffee"
+                    ></Example>
+                    <Example
+                        gaelic="Tha gràdh aig Iain air càise"
+                        english="Iain loves cheese"
+                        englishLiteral="Iain's love is on cheese"
+                    ></Example>
+                </Examples>
+            </p>
+            
+            <h3>
+                gràin (hatred)
+            </h3>
+            <p>
+                <Examples>
+                    <Example
                         gaelic="Bha gràin aig Calum air"
                         english="Calum hated it"
                         englishLiteral="Calum's hatered was on it"
@@ -85,6 +126,37 @@ export function IdiomMyLoveIsOn() {
                         gaelic="Bha gràin againn air an fhilm"
                         english="We hated the film"
                         englishLiteral="Our hatered was on the film"
+                    ></Example>
+                </Examples>
+            </p>
+            
+            <h3>
+                cuimhne (memory)
+            </h3>
+            <p>
+                <Examples>
+                    <Example
+                        gaelic="Tha cuimhne agam ort"
+                        english="I remember you"
+                        englishLiteral="My memory is on you"
+                    ></Example>
+                    <Example
+                        gaelic="A bheil cuimhne agad orm"
+                        english="Do you remember me?"
+                        englishLiteral="Is your memory on me?"
+                    ></Example>
+                </Examples>
+            </p>
+            
+            <h3>
+                feum (need)
+            </h3>
+            <p>
+                <Examples>
+                    <Example
+                        gaelic="Cha bhi feum agad air ad-ghrèine"
+                        english="You will not need a sun-hat"
+                        englishLiteral="Your need will not be on a sun hat"
                     ></Example>
                 </Examples>
             </p>

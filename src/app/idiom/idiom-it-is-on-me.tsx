@@ -111,6 +111,9 @@ export function IdiomItIsOnMe() {
                         <GD><strong>fearg, an fhearg</strong></GD> - anger, the anger (ie angry)
                     </li>
                     <li>
+                        <GD><strong>an caothach</strong></GD> - fury, rage (ie furious, enraged)
+                    </li>
+                    <li>
                         <GD><strong>bus</strong></GD> - grimace, pouting lips (ie sulking)
                     </li>
                     <li>
