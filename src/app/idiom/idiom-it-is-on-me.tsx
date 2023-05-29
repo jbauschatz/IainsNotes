@@ -1,27 +1,33 @@
 
 import {Container, Row} from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import { Example } from '../component/example/example';
 import { Examples } from '../component/example/examples';
 import { GD } from '../component/inline/inline-helper-gd';
+import { buildIdiomPath } from '../page-util';
+import { NavItem } from '../component/navigation/nav-item';
+import { PrepositionAirInlineNav } from '../grammar/preposition/preposition-air';
+
+export const IDIOM_IT_IS_ON_ME_RESOURCE_PATH = buildIdiomPath('tha_an_tacras_orm');
+
+export function IdiomItIsOnMeNavItem() {
+    return <NavItem to={IDIOM_IT_IS_ON_ME_RESOURCE_PATH}>
+        Tha an t-acras orm (I am hungry)
+    </NavItem>
+}
 
 /**
  * Page for the idiom "Tha ... orm (condition or mood)"
  * Literally "... is on me"
  */
-export function IdiomItOnInMe() {
+export function IdiomItIsOnMe() {
     return <Container>
         <Row>
-            <h1>Tha an t-acras orm (The hunger is upon me)</h1>
+            <h1>Tha an t-acras orm (I am hungry)</h1>
             <p>
                 When you experience a certain condition (like hunger, thirst, anger or fear), you are considered to <em>have</em> that condition.
             </p>
             <p>
-                Use the preposition{' '}
-                <LinkContainer to="/grammar/preposition/air(on)"><a>
-                    <GD>air</GD> (on)
-                </a></LinkContainer>{' '}
-                to convey this as being <em>upon</em> you.
+                Use the preposition <PrepositionAirInlineNav/> to convey this as being <em>upon</em> you.
             </p>
             <p>
                 <Example
@@ -67,9 +73,7 @@ export function IdiomItOnInMe() {
             
             <h2>Pronoun Examples</h2>
             <p>
-                When describing a pronoun, use the pronoun form of <LinkContainer to="/grammar/preposition/air(on)"><a>
-                    <GD>air</GD> (on)
-                </a></LinkContainer> - for example <GD>orm</GD> or <GD>ort</GD>.
+                When describing a pronoun, use the pronoun form of <PrepositionAirInlineNav/> - for example <GD>orm</GD> or <GD>ort</GD>.
             </p>
             <p>
                 <Examples>

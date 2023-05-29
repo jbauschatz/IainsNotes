@@ -1,9 +1,19 @@
 
 import {Container, Row} from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import { Example } from '../component/example/example';
 import { Examples } from '../component/example/examples';
 import { GD } from '../component/inline/inline-helper-gd';
+import { buildIdiomPath } from '../page-util';
+import { NavItem } from '../component/navigation/nav-item';
+import { PrepositionLeInlineNav } from '../grammar/preposition/preposition-le';
+
+export const IDIOM_PREFERS_IS_FHEARR_LE_RESOURCE_PATH = buildIdiomPath('is_fhearr_le');
+
+export function IdiomPrefersIsFhearrLeNavItem() {
+    return <NavItem to={IDIOM_PREFERS_IS_FHEARR_LE_RESOURCE_PATH}>
+        Is fheàrr le (prefers)
+    </NavItem>
+}
 
 /**
  * Page for the idiom "is fheàrr le (prefers)"
@@ -12,11 +22,11 @@ export function IdiomPrefersIsFhearrLe() {
     return <Container>
         <Row>
             <h1>Is fheàrr le (prefers)</h1>
-            <p>This idiom combines the verb <GD>is</GD> (to be), with the comparative adjective <GD>fheàrr</GD> (better) (comparative form of <GD>màth</GD> (good)),
-                and the preposition{' '}
-                <LinkContainer to="/grammar/preposition/le(with)"><a>
-                    <GD>le</GD> (with, by)
-                </a></LinkContainer>, to mean preferring something.
+            <p>
+                This idiom combines the verb <GD>is</GD> (to be),
+                with the comparative adjective <GD>fheàrr</GD> (better) (comparative form of <GD>màth</GD> (good)),
+                and the preposition <PrepositionLeInlineNav/>,
+                to mean preferring something.
             </p>
             <p>
                 <Example
@@ -59,10 +69,8 @@ export function IdiomPrefersIsFhearrLe() {
 
             <h2>Pronoun Examples</h2>
             <p>
-                When the subject doing the preferring is a pronoun, the pronominal form of{' '}
-                <LinkContainer to="/grammar/preposition/le(with)"><a>
-                    <GD>le</GD> (with, by)
-                </a></LinkContainer> should be used.
+                When the subject doing the preferring is a pronoun,
+                the pronominal form of <PrepositionLeInlineNav/> should be used.
             </p>
             <p>
                 <Examples>

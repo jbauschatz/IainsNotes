@@ -1,7 +1,26 @@
 import { Container } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import { GD } from "../../component/inline/inline-helper-gd";
 import { PronounTable } from "../../component/pronoun-table";
+import { buildPrepositionPath } from "../../page-util";
+import { NavItem } from "../../component/navigation/nav-item";
+import { IdiomIamInMyNavItem } from "../../idiom/idiom-i-am-in-my";
+import { IdiomStativeVerbNavItem } from "../../idiom/idiom-stative-verb";
+import { IdiomItIsInMeNavItem } from "../../idiom/idiom-it-is-in-me";
+import { NavList } from "../../component/navigation/nav-list";
+
+export const PREPOSITION_ANN_RESOURCE_PATH = buildPrepositionPath('ann(in)');
+
+export function PrepositionAnnNavItem() {
+    return <NavItem to={PREPOSITION_ANN_RESOURCE_PATH}>
+        ann (in)
+    </NavItem>
+}
+
+export function PrepositionAnnInlineNav() {
+    return <NavItem to={PREPOSITION_ANN_RESOURCE_PATH}>
+        <GD>ann</GD> (in)
+    </NavItem>
+}
 
 export function PrepositionAnn(props: {}) {
 
@@ -55,23 +74,11 @@ export function PrepositionAnn(props: {}) {
 
         <h2>Related Idioms</h2>
         <p>
-            <ul>
-                <li>
-                    <LinkContainer to="/idiom/ThaMiNamChadal">
-                        <a>Tha mi nam chadal (I am in my sleeping)</a>
-                    </LinkContainer>
-                </li>
-                <li>
-                    <LinkContainer to="/idiom/IAmInMy">
-                        <a>Tha mi nam thidsear (I am in my teacher)</a>
-                    </LinkContainer>
-                </li>
-                <li>
-                    <LinkContainer to="/idiom/ItIsInMe">
-                        <a>'S e tidsear a th' annam (It's a teacher that is in me)</a>
-                    </LinkContainer>
-                </li>
-            </ul>
+            <NavList>
+                <IdiomStativeVerbNavItem/>
+                <IdiomIamInMyNavItem/>
+                <IdiomItIsInMeNavItem/>
+            </NavList>
         </p>
 
         <h2>References</h2>

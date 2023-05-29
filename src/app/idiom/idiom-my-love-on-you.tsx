@@ -1,25 +1,32 @@
 
 import {Container, Row} from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import { Example } from '../component/example/example';
 import { Examples } from '../component/example/examples';
 import { GD } from '../component/inline/inline-helper-gd';
+import { buildIdiomPath } from '../page-util';
+import { NavItem } from '../component/navigation/nav-item';
+import { PrepositionAigInlineNav } from '../grammar/preposition/preposition-aig';
+import { PrepositionAirInlineNav } from '../grammar/preposition/preposition-air';
+
+export const IDIOM_MY_LOVE_IS_ON_RESOURCE_PATH = buildIdiomPath('tha_gaol_agam_air');
+
+export function IdiomMyLoveIsOnNavItem() {
+    return <NavItem to={IDIOM_MY_LOVE_IS_ON_RESOURCE_PATH}>
+        Tha gaol agam ort (My love is on you)
+    </NavItem>
+}
 
 /**
  * Page for the idiom "Tha ... agam ort (feeling, emotion)"
  * Literally "My ... is on you"
  */
-export function IdiomMyLoveOnYou() {
+export function IdiomMyLoveIsOn() {
     return <Container>
         <Row>
             <h1>Tha gaol agam ort (My love is on you)</h1>
-            <p>This idiom combines <GD>bi</GD>, possession via the preposition{' '}
-                <LinkContainer to="/grammar/preposition/aig(at)"><a>
-                    <GD>aig</GD> (at)
-                </a></LinkContainer>, and the preposition{' '}
-                <LinkContainer to="/grammar/preposition/air(on)"><a>
-                    <GD>air</GD> (on)
-                </a></LinkContainer>, to apply an emotion or feeling from one entity to another.
+            <p>
+                This idiom combines <GD>bi</GD>, possession via the preposition <PrepositionAigInlineNav/>,
+                and the preposition <PrepositionAirInlineNav/>, to apply an emotion or feeling from one entity to another.
             </p>
             <p>
                 <Example
@@ -59,13 +66,8 @@ export function IdiomMyLoveOnYou() {
 
             <h2>Pronoun Examples</h2>
             <p>
-                When either entity is a pronoun, the pronominal form of{' '}
-                <LinkContainer to="/grammar/preposition/aig(at)"><a>
-                    <GD>aig</GD> (at)
-                </a></LinkContainer> or {' '}
-                <LinkContainer to="/grammar/preposition/air(on)"><a>
-                    <GD>air</GD> (on)
-                </a></LinkContainer> should be used, respectively.
+                When either entity is a pronoun, the pronominal form of <PrepositionAigInlineNav/> or <PrepositionAirInlineNav/> should
+                be used, respectively.
             </p>
             <p>
                 <Examples>

@@ -7,20 +7,21 @@ import {
   Route,
   Routes,
 } from 'react-router-dom';
-import { PrepositionAnn } from './app/grammar/preposition/preposition-ann';
+import { PREPOSITION_ANN_RESOURCE_PATH, PrepositionAnn, PrepositionAnnNavItem } from './app/grammar/preposition/preposition-ann';
 import { Navbar, Nav } from 'react-bootstrap';
 import Container from 'react-bootstrap/esm/Container';
 import { LinkContainer } from 'react-router-bootstrap';
-import { PrepositionAir } from './app/grammar/preposition/preposition-air';
-import { IdiomItIsInMe } from './app/idiom/idiom-it-is-in-me';
-import { IdiomIAmInMy } from './app/idiom/idiom-i-am-in-my';
-import { IdiomItOnInMe } from './app/idiom/idiom-it-is-on-me';
-import { IdiomMyLoveOnYou } from './app/idiom/idiom-my-love-on-you';
-import { PrepositionAig } from './app/grammar/preposition/preposition-aig';
-import { IdiomStativeVerb } from './app/idiom/idiom-stative-verb';
-import { IdiomKeenOn } from './app/idiom/idiom-keen-on';
-import { IdiomPrefersIsFhearrLe } from './app/idiom/idiom-prefers-is-fhearr-le';
-import { PrepositionLe } from './app/grammar/preposition/preposition-le';
+import { PREPOSITION_AIR_RESOURCE_PATH, PrepositionAir, PrepositionAirNavItem } from './app/grammar/preposition/preposition-air';
+import { IDIOM_IT_IS_IN_ME_RESOURCE_PATH, IdiomItIsInMe, IdiomItIsInMeNavItem } from './app/idiom/idiom-it-is-in-me';
+import { IDIOM_I_AM_IN_MY_RESOURCE_PATH, IdiomIAmInMy, IdiomIamInMyNavItem } from './app/idiom/idiom-i-am-in-my';
+import { IDIOM_IT_IS_ON_ME_RESOURCE_PATH, IdiomItIsOnMeNavItem, IdiomItIsOnMe } from './app/idiom/idiom-it-is-on-me';
+import { IDIOM_MY_LOVE_IS_ON_RESOURCE_PATH, IdiomMyLoveIsOn, IdiomMyLoveIsOnNavItem } from './app/idiom/idiom-my-love-on-you';
+import { PREPOSITION_AIG_RESOURCE_PATH, PrepositionAig, PrepositionAigNavItem } from './app/grammar/preposition/preposition-aig';
+import { IDIOM_STATIVE_VERB_RESOURCE_PATH, IdiomStativeVerb, IdiomStativeVerbNavItem } from './app/idiom/idiom-stative-verb';
+import { IDIOM_KEEN_ON_RESOURCE_PATH, IdiomKeenOn, IdiomKeenOnNavItem } from './app/idiom/idiom-keen-on';
+import { IDIOM_PREFERS_IS_FHEARR_LE_RESOURCE_PATH, IdiomPrefersIsFhearrLe, IdiomPrefersIsFhearrLeNavItem } from './app/idiom/idiom-prefers-is-fhearr-le';
+import { PREPOSITION_LE_RESOURCE_PATH, PrepositionLe, PrepositionLeNavItem } from './app/grammar/preposition/preposition-le';
+import { NavList } from './app/component/navigation/nav-list';
 
 function Home() {
   return <Container>
@@ -43,28 +44,12 @@ function Home() {
       </p>
 
       <h2>Prepositions</h2>
-      <ul>
-        <li>
-          <LinkContainer to="/grammar/preposition/aig(at)">
-            <a>aig (at)</a>
-          </LinkContainer>
-        </li>
-        <li>
-          <LinkContainer to="/grammar/preposition/air(on)">
-            <a>air (on)</a>
-          </LinkContainer>
-        </li>
-        <li>
-          <LinkContainer to="/grammar/preposition/ann(in)">
-            <a>ann (in)</a>
-          </LinkContainer>
-        </li>
-        <li>
-          <LinkContainer to="/grammar/preposition/le(with)">
-            <a>le (with, by)</a>
-          </LinkContainer>
-        </li>
-      </ul>
+      <NavList>
+        <PrepositionAigNavItem/>
+        <PrepositionAirNavItem/>
+        <PrepositionAnnNavItem/>
+        <PrepositionLeNavItem/>
+      </NavList>
 
       <h2>Idioms</h2>
       <p>
@@ -74,80 +59,33 @@ function Home() {
         Each idiom is listed below with a primary example in Gàidhlig and English, but more details are found by following the link.
       </p>
       <p>
-        <ul>
-          <li>
-            <LinkContainer to="/idiom/ItIsOnMe">
-              <a>Tha an t-acras orm (The hunger is upon me)</a>
-            </LinkContainer>
-          </li>
-          <li>
-            <LinkContainer to="/idiom/ThaGaolAgamOrt">
-              <a>Tha gaol agam ort (My love is upon you)</a>
-            </LinkContainer>
-          </li>
-          <li>
-            <LinkContainer to="/idiom/ThaMiNamChadal">
-              <a>Tha mi nam chadal (I am in my sleeping)</a>
-            </LinkContainer>
-          </li>
-          <li>
-            <LinkContainer to="/idiom/IAmInMy">
-              <a>Tha mi nam thidsear (I am in my teacher)</a>
-            </LinkContainer>
-          </li>
-          <li>
-            <LinkContainer to="/idiom/ItIsInMe">
-              <a>'S e tidsear a th' annam (It's a teacher that is in me)</a>
-            </LinkContainer>
-          </li>
-          <li>
-            <LinkContainer to="/idiom/KeenOn">
-              <a>dèidheil air (keen on)</a>
-            </LinkContainer>
-          </li>
-          <li>
-            <LinkContainer to="/idiom/IsFhearrLePrefers">
-              <a>is fheàrr le (prefers)</a>
-            </LinkContainer>
-          </li>
-        </ul>
+        <NavList>
+          <IdiomIamInMyNavItem/>
+          <IdiomItIsInMeNavItem/>
+          <IdiomItIsOnMeNavItem/>
+          <IdiomKeenOnNavItem/>
+          <IdiomMyLoveIsOnNavItem/>
+          <IdiomPrefersIsFhearrLeNavItem/>
+          <IdiomStativeVerbNavItem/>
+        </NavList>
       </p>
 
       <h3>Idioms for Liking or Preferring</h3>
       <p>
-        <ul>
-          <li>
-            <LinkContainer to="/idiom/ThaGaolAgamOrt">
-              <a>Tha gaol agam ort (My love is upon you)</a>
-            </LinkContainer>
-          </li>
-          <li>
-            <LinkContainer to="/idiom/KeenOn">
-              <a>dèidheil air (keen on)</a>
-            </LinkContainer>
-          </li>
-          <li>
-            <LinkContainer to="/idiom/IsFhearrLePrefers">
-              <a>is fheàrr le (prefers)</a>
-            </LinkContainer>
-          </li>
-        </ul>
+        <NavList>
+          <IdiomMyLoveIsOnNavItem/>
+          <IdiomKeenOnNavItem/>
+          <IdiomPrefersIsFhearrLeNavItem/>
+        </NavList>
       </p>
       
       <h3>Idioms for State or Condition</h3>
       <p>
-        <ul>
-          <li>
-            <LinkContainer to="/idiom/ItIsOnMe">
-              <a>Tha an t-acras orm (The hunger is upon me)</a>
-            </LinkContainer>
-          </li>
-          <li>
-            <LinkContainer to="/idiom/ThaMiNamChadal">
-              <a>Tha mi nam chadal (I am in my sleeping)</a>
-            </LinkContainer>
-          </li>
-        </ul>
+        <NavList>
+          <IdiomIamInMyNavItem/>
+          <IdiomStativeVerbNavItem/>
+          <IdiomItIsOnMeNavItem/>
+        </NavList>
       </p>
   </Container>
 }
@@ -175,19 +113,19 @@ function App() {
             <Route path="/" element={<Home/>}/>
 
             {/* Grammar Pages */}
-            <Route path="/grammar/preposition/aig(at)" element={<PrepositionAig/>}/>
-            <Route path="/grammar/preposition/air(on)" element={<PrepositionAir/>}/>
-            <Route path="/grammar/preposition/ann(in)" element={<PrepositionAnn/>}/>
-            <Route path="/grammar/preposition/le(with)" element={<PrepositionLe/>}/>
+            <Route path={PREPOSITION_AIG_RESOURCE_PATH} element={<PrepositionAig/>}/>
+            <Route path={PREPOSITION_AIR_RESOURCE_PATH} element={<PrepositionAir/>}/>
+            <Route path={PREPOSITION_ANN_RESOURCE_PATH} element={<PrepositionAnn/>}/>
+            <Route path={PREPOSITION_LE_RESOURCE_PATH} element={<PrepositionLe/>}/>
 
             {/* Idioms */}
-            <Route path="/idiom/ItIsInMe" element={<IdiomItIsInMe/>}/>
-            <Route path="/idiom/ItIsOnMe" element={<IdiomItOnInMe/>}/>
-            <Route path="/idiom/IAmInMy" element={<IdiomIAmInMy/>}/>
-            <Route path="/idiom/ThaMiNamChadal" element={<IdiomStativeVerb/>}/>
-            <Route path="/idiom/ThaGaolAgamOrt" element={<IdiomMyLoveOnYou/>}/>
-            <Route path="/idiom/KeenOn" element={<IdiomKeenOn/>}/>
-            <Route path="/idiom/IsFhearrLePrefers" element={<IdiomPrefersIsFhearrLe/>}/>
+            <Route path={IDIOM_IT_IS_IN_ME_RESOURCE_PATH} element={<IdiomItIsInMe/>}/>
+            <Route path={IDIOM_IT_IS_ON_ME_RESOURCE_PATH} element={<IdiomItIsOnMe/>}/>
+            <Route path={IDIOM_I_AM_IN_MY_RESOURCE_PATH} element={<IdiomIAmInMy/>}/>
+            <Route path={IDIOM_MY_LOVE_IS_ON_RESOURCE_PATH} element={<IdiomMyLoveIsOn/>}/>
+            <Route path={IDIOM_KEEN_ON_RESOURCE_PATH} element={<IdiomKeenOn/>}/>
+            <Route path={IDIOM_PREFERS_IS_FHEARR_LE_RESOURCE_PATH} element={<IdiomPrefersIsFhearrLe/>}/>
+            <Route path={IDIOM_STATIVE_VERB_RESOURCE_PATH} element={<IdiomStativeVerb/>}/>
         </Routes>
     </Router>
   );

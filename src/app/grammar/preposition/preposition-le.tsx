@@ -1,9 +1,26 @@
 import { Container } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import { GD } from "../../component/inline/inline-helper-gd";
 import { PronounTable } from "../../component/pronoun-table";
 import { Examples } from "../../component/example/examples";
 import { Example } from "../../component/example/example";
+import { buildPrepositionPath } from "../../page-util";
+import { NavItem } from "../../component/navigation/nav-item";
+import { NavList } from "../../component/navigation/nav-list";
+import { IdiomPrefersIsFhearrLeNavItem } from "../../idiom/idiom-prefers-is-fhearr-le";
+
+export const PREPOSITION_LE_RESOURCE_PATH = buildPrepositionPath('le(with)');
+
+export function PrepositionLeNavItem() {
+    return <NavItem to={PREPOSITION_LE_RESOURCE_PATH}>
+        le (with, by)
+    </NavItem>
+}
+
+export function PrepositionLeInlineNav() {
+    return <NavItem to={PREPOSITION_LE_RESOURCE_PATH}>
+        <GD>le</GD> (with, by)
+    </NavItem>
+}
 
 export function PrepositionLe(props: {}) {
 
@@ -79,13 +96,9 @@ export function PrepositionLe(props: {}) {
 
         <h2>Related Idioms</h2>
         <p>
-            <ul>
-                <li>
-                    <LinkContainer to="/idiom/IsFhearrLePrefers">
-                        <a>is fheàrr le (prefers)</a>
-                    </LinkContainer>
-                </li>
-            </ul>
+            <NavList>
+                <IdiomPrefersIsFhearrLeNavItem/>
+            </NavList>
         </p>
 
         <h2>References</h2>

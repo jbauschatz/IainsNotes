@@ -4,6 +4,19 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { Example } from '../component/example/example';
 import { Examples } from '../component/example/examples';
 import { GD } from '../component/inline/inline-helper-gd';
+import { buildIdiomPath } from '../page-util';
+import { NavItem } from '../component/navigation/nav-item';
+import { PrepositionAnnInlineNav } from '../grammar/preposition/preposition-ann';
+import { NavList } from '../component/navigation/nav-list';
+import { IdiomIamInMyNavItem } from './idiom-i-am-in-my';
+
+export const IDIOM_IT_IS_IN_ME_RESOURCE_PATH = buildIdiomPath('s_e_tidsear_a_th_annam');
+
+export function IdiomItIsInMeNavItem() {
+    return <NavItem to={IDIOM_IT_IS_IN_ME_RESOURCE_PATH}>
+        'S e tidsear a th' annam (I am a teacher)
+    </NavItem>
+}
 
 /**
  * Page for the idiom "'S e ... a th' ann an (identity or occupation)"
@@ -13,10 +26,7 @@ export function IdiomItIsInMe() {
     return <Container>
         <Row>
             <h1>'S e tidsear a th' annam (I am a teacher)</h1>
-            <p>One idiom for expressing something's identity or occupation combines <GD>'s e</GD> with {' '}
-                <LinkContainer to="/grammar/preposition/ann(in)"><a>
-                    <GD>ann</GD> (in)
-                </a></LinkContainer>.
+            <p>One idiom for expressing something's identity or occupation combines <GD>'s e</GD> with <PrepositionAnnInlineNav/>.
                 For example rather than saying you <em>are</em> a teacher, you say it's a teacher that is <em>in</em> you.
             </p>
             <p>
@@ -74,9 +84,7 @@ export function IdiomItIsInMe() {
 
             <h2>Pronoun Examples</h2>
             <p>
-                When describing a pronoun, use the pronoun form of <LinkContainer to="/grammar/preposition/ann(in)"><a>
-                    <GD>ann</GD> (in)
-                </a></LinkContainer> - for example <GD>annam</GD> or <GD>annad</GD>.
+                When describing a pronoun, use the pronoun form of <PrepositionAnnInlineNav/> - for example <GD>annam</GD> or <GD>annad</GD>.
             </p>
             <p>
                 <Examples>
@@ -108,13 +116,9 @@ export function IdiomItIsInMe() {
                 Here are some other ways to express similar concepts.
             </p>
             <p>
-                <ul>
-                    <li>
-                        <LinkContainer to="/idiom/IAmInMy">
-                            <a>Tha mi nam thidsear (I am in my teacher)</a>
-                        </LinkContainer>
-                    </li>
-                </ul>
+                <NavList>
+                    <IdiomIamInMyNavItem/>
+                </NavList>
             </p>
         </Row>
     </Container>

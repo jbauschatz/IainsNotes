@@ -1,9 +1,21 @@
 
 import {Container, Row} from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import { Example } from '../component/example/example';
 import { Examples } from '../component/example/examples';
 import { GD } from '../component/inline/inline-helper-gd';
+import { buildIdiomPath } from '../page-util';
+import { NavItem } from '../component/navigation/nav-item';
+import { PrepositionAnnInlineNav } from '../grammar/preposition/preposition-ann';
+import { NavList } from '../component/navigation/nav-list';
+import { IdiomItIsInMeNavItem } from './idiom-it-is-in-me';
+
+export const IDIOM_I_AM_IN_MY_RESOURCE_PATH = buildIdiomPath('tha_mi_nam_thidsear');
+
+export function IdiomIamInMyNavItem() {
+    return <NavItem to={IDIOM_I_AM_IN_MY_RESOURCE_PATH}>
+        Tha mi nam thidsear (I am in my teacher)
+    </NavItem>
+}
 
 /**
  * Page for the idiom "Tha mi nam ... (occupation)"
@@ -13,10 +25,7 @@ export function IdiomIAmInMy() {
     return <Container>
         <Row>
             <h1>Tha mi nam thidsear (I am in my teacher)</h1>
-            <p>This idiom combines <GD>bi</GD> with a possessive form of {' '}
-                <LinkContainer to="/grammar/preposition/ann(in)"><a>
-                    <GD>ann</GD> (in)
-                </a></LinkContainer> to express your current job or occupation.
+            <p>This idiom combines <GD>bi</GD> with a possessive form of <PrepositionAnnInlineNav/> to express your current job or occupation.
                 For example rather than saying you <em>are</em> a teacher, you say that you are <em>in your teacher</em>.
             </p>
             <p>
@@ -71,13 +80,9 @@ export function IdiomIAmInMy() {
                 Here are some other ways to express similar concepts.
             </p>
             <p>
-                <ul>
-                    <li>
-                        <LinkContainer to="/idiom/ItIsInMe">
-                            <a>'S e tidsear a th' annam (It's a teacher that is in me)</a>
-                        </LinkContainer>
-                    </li>
-                </ul>
+                <NavList>
+                    <IdiomItIsInMeNavItem/>
+                </NavList>
             </p>
         </Row>
     </Container>

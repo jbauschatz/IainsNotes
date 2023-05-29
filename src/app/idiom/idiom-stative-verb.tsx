@@ -1,9 +1,19 @@
 
 import {Container, Row} from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import { Example } from '../component/example/example';
 import { Examples } from '../component/example/examples';
 import { GD } from '../component/inline/inline-helper-gd';
+import { buildIdiomPath } from '../page-util';
+import { NavItem } from '../component/navigation/nav-item';
+import { PrepositionAnnInlineNav } from '../grammar/preposition/preposition-ann';
+
+export const IDIOM_STATIVE_VERB_RESOURCE_PATH = buildIdiomPath('tha_mi_nam_chadal');
+
+export function IdiomStativeVerbNavItem() {
+    return <NavItem to={IDIOM_STATIVE_VERB_RESOURCE_PATH}>
+        Tha mi nam chadal (I am in my sleeping)
+    </NavItem>
+}
 
 /**
  * Page for the idiom "Tha mi nam ... (stative verb)"
@@ -13,10 +23,9 @@ export function IdiomStativeVerb() {
     return <Container>
         <Row>
             <h1>Tha mi nam chadal (I am in my sleeping)</h1>
-            <p>This idiom combines <GD>bi</GD> with a possessive form of {' '}
-                <LinkContainer to="/grammar/preposition/ann(in)"><a>
-                    <GD>ann</GD> (in)
-                </a></LinkContainer> and the verbal noun to express a state of activity.
+            <p>
+                This idiom combines <GD>bi</GD> with a possessive form of <PrepositionAnnInlineNav/> and 
+                the verbal noun to express a state of activity.
             </p>
             <p>
                 <Example

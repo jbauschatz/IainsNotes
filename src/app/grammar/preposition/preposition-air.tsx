@@ -1,7 +1,26 @@
 import { Container } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import { GD } from "../../component/inline/inline-helper-gd";
 import { PronounTable } from "../../component/pronoun-table";
+import { buildPrepositionPath } from "../../page-util";
+import { NavItem } from "../../component/navigation/nav-item";
+import { NavList } from "../../component/navigation/nav-list";
+import { IdiomMyLoveIsOnNavItem } from "../../idiom/idiom-my-love-on-you";
+import { IdiomItIsOnMeNavItem } from "../../idiom/idiom-it-is-on-me";
+import { IdiomKeenOnNavItem } from "../../idiom/idiom-keen-on";
+
+export const PREPOSITION_AIR_RESOURCE_PATH = buildPrepositionPath('air(on)');
+
+export function PrepositionAirNavItem() {
+    return <NavItem to={PREPOSITION_AIR_RESOURCE_PATH}>
+        air (on)
+    </NavItem>
+}
+
+export function PrepositionAirInlineNav() {
+    return <NavItem to={PREPOSITION_AIR_RESOURCE_PATH}>
+        <GD>air</GD> (on)
+    </NavItem>
+}
 
 export function PrepositionAir(props: {}) {
 
@@ -55,23 +74,11 @@ export function PrepositionAir(props: {}) {
 
         <h2>Related Idioms</h2>
         <p>
-            <ul>
-                <li>
-                    <LinkContainer to="/idiom/ThaGaolAgamOrt">
-                        <a>Tha gaol agam ort (My love is upon you)</a>
-                    </LinkContainer>
-                </li>
-                <li>
-                    <LinkContainer to="/idiom/ItIsOnMe">
-                        <a>Tha an t-acras orm (The hunger is upon me)</a>
-                    </LinkContainer>
-                </li>
-                <li>
-                    <LinkContainer to="/idiom/KeenOn">
-                        <a>dèidheil air (keen on)</a>
-                    </LinkContainer>
-                </li>
-            </ul>
+            <NavList>
+                <IdiomMyLoveIsOnNavItem/>
+                <IdiomItIsOnMeNavItem/>
+                <IdiomKeenOnNavItem/>
+            </NavList>
         </p>
 
         <h2>References</h2>

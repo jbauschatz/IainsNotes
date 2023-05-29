@@ -1,9 +1,19 @@
 
 import {Container, Row} from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import { Example } from '../component/example/example';
 import { Examples } from '../component/example/examples';
 import { GD } from '../component/inline/inline-helper-gd';
+import { NavItem } from '../component/navigation/nav-item';
+import { buildIdiomPath } from '../page-util';
+import { PrepositionAirInlineNav } from '../grammar/preposition/preposition-air';
+
+export const IDIOM_KEEN_ON_RESOURCE_PATH = buildIdiomPath('deidheil_air');
+
+export function IdiomKeenOnNavItem() {
+    return <NavItem to={IDIOM_KEEN_ON_RESOURCE_PATH}>
+        dèidheil air (keen on)
+    </NavItem>
+}
 
 /**
  * Page for the idiom "dèidheil air (keen on)"
@@ -12,10 +22,8 @@ export function IdiomKeenOn() {
     return <Container>
         <Row>
             <h1>dèidheil air (keen on)</h1>
-            <p>This idiom combines the adjective <GD>dèidheil</GD> (desirous of, eager for, fond of, keen on), with the prepostion{' '}
-                <LinkContainer to="/grammar/preposition/air(on)"><a>
-                    <GD>air</GD> (on)
-                </a></LinkContainer>, to mean keen on or fond of something.
+            <p>This idiom combines the adjective <GD>dèidheil</GD> (desirous of, eager for, fond of, keen on), 
+            with the prepostion <PrepositionAirInlineNav/>, to mean keen on or fond of something.
             </p>
             <p>
                 <Example
@@ -53,10 +61,7 @@ export function IdiomKeenOn() {
 
             <h2>Pronoun Examples</h2>
             <p>
-                When the object being desired is a pronoun, the pronominal form of{' '}
-                <LinkContainer to="/grammar/preposition/air(on)"><a>
-                    <GD>air</GD> (on)
-                </a></LinkContainer> should be used.
+                When the object being desired is a pronoun, the pronominal form of <PrepositionAirInlineNav/> should be used.
             </p>
             <p>
                 <Examples>

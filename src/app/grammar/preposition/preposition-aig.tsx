@@ -1,7 +1,24 @@
 import { Container } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import { GD } from "../../component/inline/inline-helper-gd";
 import { PronounTable } from "../../component/pronoun-table";
+import { buildPrepositionPath } from "../../page-util";
+import { NavItem } from "../../component/navigation/nav-item";
+import { NavList } from "../../component/navigation/nav-list";
+import { IdiomMyLoveIsOnNavItem } from "../../idiom/idiom-my-love-on-you";
+
+export const PREPOSITION_AIG_RESOURCE_PATH = buildPrepositionPath('aig(at)');
+
+export function PrepositionAigNavItem() {
+    return <NavItem to={PREPOSITION_AIG_RESOURCE_PATH}>
+        aig (at)
+    </NavItem>
+}
+
+export function PrepositionAigInlineNav() {
+    return <NavItem to={PREPOSITION_AIG_RESOURCE_PATH}>
+        <GD>aig</GD> (at)
+    </NavItem>
+}
 
 export function PrepositionAig(props: {}) {
 
@@ -55,13 +72,9 @@ export function PrepositionAig(props: {}) {
 
         <h2>Related Idioms</h2>
         <p>
-            <ul>
-                <li>
-                    <LinkContainer to="/idiom/ThaGaolAgamOrt">
-                        <a>Tha gaol agam ort (My love is upon you)</a>
-                    </LinkContainer>
-                </li>
-            </ul>
+            <NavList>
+                <IdiomMyLoveIsOnNavItem/>
+            </NavList>
         </p>
 
         <h2>References</h2>
