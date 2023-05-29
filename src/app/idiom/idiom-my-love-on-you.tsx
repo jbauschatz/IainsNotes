@@ -141,7 +141,7 @@ export function IdiomMyLoveIsOn() {
                         englishLiteral="My memory is on you"
                     ></Example>
                     <Example
-                        gaelic="A bheil cuimhne agad orm"
+                        gaelic="A bheil cuimhne agad orm?"
                         english="Do you remember me?"
                         englishLiteral="Is your memory on me?"
                     ></Example>
