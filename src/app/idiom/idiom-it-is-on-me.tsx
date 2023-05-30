@@ -13,7 +13,7 @@ export const IDIOM_IT_IS_ON_ME_RESOURCE_PATH = buildIdiomPath('tha_an_tacras_orm
 
 export function IdiomItIsOnMeNavItem() {
     return <NavItem to={IDIOM_IT_IS_ON_ME_RESOURCE_PATH}>
-        Tha an t-acras orm (I am hungry)
+        Tha an t-acras orm (The hunger is on me)
     </NavItem>
 }
 
@@ -24,18 +24,18 @@ export function IdiomItIsOnMeNavItem() {
 export function IdiomItIsOnMe() {
     return <Container>
         <Row>
-            <h1>Tha an t-acras orm (I am hungry)</h1>
+            <h1>Tha an t-acras orm (The hunger is on me)</h1>
             <p>
-                When you experience a certain condition (like hunger, thirst, anger or fear), you are considered to <em>have</em> that condition.
+                When you experience a certain condition (like hunger, thirst, anger or fear), you are considered to have that condition <em>on</em> you.
             </p>
             <p>
-                Use the preposition <PrepositionAirInlineNav/> to convey this as being <em>upon</em> you.
+                Use the preposition <PrepositionAirInlineNav/> to convey this as being <em>on</em> you.
             </p>
             <p>
                 <Example
                     gaelic="Tha an t-acras air Anna"
                     english="Anna is hungry"
-                    englishLiteral="Anna has the hunger, the hunger is upon Anna"
+                    englishLiteral="Anna has the hunger, the hunger is on Anna"
                 ></Example>
             </p>
             <p>
@@ -53,12 +53,12 @@ export function IdiomItIsOnMe() {
                     <Example
                         gaelic="Tha an t-acras aig Anna"
                         english="Anna is hungry"
-                        englishLiteral="The hunger is upon Anna"
+                        englishLiteral="The hunger is on Anna"
                     ></Example>
                     <Example
                         gaelic="Tha am pathadh aig Calum"
                         english="Calum is thirsty"
-                        englishLiteral="The thirst is upon Calum"
+                        englishLiteral="The thirst is on Calum"
                     ></Example>
                     <Example
                         gaelic="Bha fearg air a' chat"
@@ -82,12 +82,12 @@ export function IdiomItIsOnMe() {
                     <Example
                         gaelic="Tha an cnatan orm"
                         english="I have a cold"
-                        englishLiteral="The cold is upon me"
+                        englishLiteral="The cold is on me"
                     ></Example>
                     <Example
                         gaelic="Tha an t-eagal orra"
                         english="They are scared"
-                        englishLiteral="The fear is upon them"
+                        englishLiteral="The fear is on them"
                     ></Example>
                 </Examples>
             </p>
