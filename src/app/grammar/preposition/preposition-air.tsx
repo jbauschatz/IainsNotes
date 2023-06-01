@@ -8,6 +8,7 @@ import { IdiomMyLoveIsOnNavItem } from "../../idiom/idiom-my-love-on-you";
 import { IdiomItIsOnMeNavItem } from "../../idiom/idiom-it-is-on-me";
 import { IdiomKeenOnNavItem } from "../../idiom/idiom-keen-on";
 import { ExternalLink } from "../../component/navigation/external-link";
+import { IdiomTheNameThatIsOnNavItem } from "../../idiom/idiom-the-name-that-is-on-me";
 
 export const PREPOSITION_AIR_RESOURCE_PATH = buildPrepositionPath('air(on)');
 
@@ -76,6 +77,7 @@ export function PrepositionAir(props: {}) {
         <h2>Related Idioms</h2>
         <p>
             <NavList>
+                <IdiomTheNameThatIsOnNavItem/>
                 <IdiomMyLoveIsOnNavItem/>
                 <IdiomItIsOnMeNavItem/>
                 <IdiomKeenOnNavItem/>

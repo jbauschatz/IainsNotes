@@ -25,6 +25,7 @@ import { IDIOM_PREFERS_IS_FHEARR_LE_RESOURCE_PATH, IdiomPrefersIsFhearrLe, Idiom
 import { PREPOSITION_LE_RESOURCE_PATH, PrepositionLe, PrepositionLeNavItem } from './app/grammar/preposition/preposition-le';
 import { NavList } from './app/component/navigation/nav-list';
 import { IDIOM_I_AM_RESOURCE_PATH, IdiomIAm, IdiomIAmNavItem } from './app/idiom/idiom-i-am';
+import { IDIOM_THE_NAME_THAT_IS_ON_RESOURCE_PATH, IdiomTheNameThatIsOn, IdiomTheNameThatIsOnNavItem } from './app/idiom/idiom-the-name-that-is-on-me';
 
 function Home() {
   return <Container>
@@ -66,6 +67,7 @@ function Home() {
           <IdiomIAmNavItem/>
           <IdiomIamInMyNavItem/>
           <IdiomItIsInMeNavItem/>
+          <IdiomTheNameThatIsOnNavItem/>
           <IdiomItIsOnMeNavItem/>
           <IdiomKeenOnNavItem/>
           <IdiomMyLoveIsOnNavItem/>
@@ -78,6 +80,7 @@ function Home() {
       <p>
         <NavList>
           <IdiomIAmNavItem/>
+          <IdiomTheNameThatIsOnNavItem/>
           <IdiomItIsInMeNavItem/>
           <IdiomIamInMyNavItem/>
         </NavList>
@@ -137,6 +140,7 @@ function App() {
 
             {/* Idioms */}
             <Route path={IDIOM_I_AM_RESOURCE_PATH} element={<IdiomIAm/>}/>
+            <Route path={IDIOM_THE_NAME_THAT_IS_ON_RESOURCE_PATH} element={<IdiomTheNameThatIsOn/>}/>
             <Route path={IDIOM_IT_IS_IN_ME_RESOURCE_PATH} element={<IdiomItIsInMe/>}/>
             <Route path={IDIOM_IT_IS_ON_ME_RESOURCE_PATH} element={<IdiomItIsOnMe/>}/>
             <Route path={IDIOM_I_AM_IN_MY_RESOURCE_PATH} element={<IdiomIAmInMy/>}/>

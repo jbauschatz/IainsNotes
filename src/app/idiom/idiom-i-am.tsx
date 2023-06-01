@@ -8,6 +8,7 @@ import { NavItem } from '../component/navigation/nav-item';
 import { NavList } from '../component/navigation/nav-list';
 import { IdiomIamInMyNavItem } from './idiom-i-am-in-my';
 import { IdiomItIsInMeNavItem } from './idiom-it-is-in-me';
+import { IdiomTheNameThatIsOn, IdiomTheNameThatIsOnNavItem } from './idiom-the-name-that-is-on-me';
 
 export const IDIOM_I_AM_RESOURCE_PATH = buildIdiomPath('is_mise_iain)');
 
@@ -73,6 +74,7 @@ export function IdiomIAm() {
             </p>
             <p>
                 <NavList>
+                    <IdiomTheNameThatIsOnNavItem/>
                     <IdiomItIsInMeNavItem/>
                     <IdiomIamInMyNavItem/>
                 </NavList>
