@@ -35,7 +35,7 @@ export function IdiomItIsOnMe() {
                 <Example
                     gaelic="Tha an t-acras air Anna"
                     english="Anna is hungry"
-                    englishLiteral="Anna has the hunger, the hunger is on Anna"
+                    englishLiteral="The hunger is on Anna"
                 ></Example>
             </p>
             <p>
