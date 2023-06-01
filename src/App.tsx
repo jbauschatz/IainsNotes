@@ -24,6 +24,7 @@ import { IDIOM_KEEN_ON_RESOURCE_PATH, IdiomKeenOn, IdiomKeenOnNavItem } from './
 import { IDIOM_PREFERS_IS_FHEARR_LE_RESOURCE_PATH, IdiomPrefersIsFhearrLe, IdiomPrefersIsFhearrLeNavItem } from './app/idiom/idiom-prefers-is-fhearr-le';
 import { PREPOSITION_LE_RESOURCE_PATH, PrepositionLe, PrepositionLeNavItem } from './app/grammar/preposition/preposition-le';
 import { NavList } from './app/component/navigation/nav-list';
+import { IDIOM_I_AM_RESOURCE_PATH, IdiomIAm, IdiomIAmNavItem } from './app/idiom/idiom-i-am';
 
 function Home() {
   return <Container>
@@ -62,6 +63,7 @@ function Home() {
       </p>
       <p>
         <NavList>
+          <IdiomIAmNavItem/>
           <IdiomIamInMyNavItem/>
           <IdiomItIsInMeNavItem/>
           <IdiomItIsOnMeNavItem/>
@@ -72,12 +74,12 @@ function Home() {
         </NavList>
       </p>
 
-      <h3>Idioms for Liking or Preferring</h3>
+      <h3>Idioms for Identity or Occupation</h3>
       <p>
         <NavList>
-          <IdiomMyLoveIsOnNavItem/>
-          <IdiomKeenOnNavItem/>
-          <IdiomPrefersIsFhearrLeNavItem/>
+          <IdiomIAmNavItem/>
+          <IdiomItIsInMeNavItem/>
+          <IdiomIamInMyNavItem/>
         </NavList>
       </p>
       
@@ -87,6 +89,15 @@ function Home() {
           <IdiomIamInMyNavItem/>
           <IdiomStativeVerbNavItem/>
           <IdiomItIsOnMeNavItem/>
+        </NavList>
+      </p>
+
+      <h3>Idioms for Liking or Preferring</h3>
+      <p>
+        <NavList>
+          <IdiomMyLoveIsOnNavItem/>
+          <IdiomKeenOnNavItem/>
+          <IdiomPrefersIsFhearrLeNavItem/>
         </NavList>
       </p>
   </Container>
@@ -125,6 +136,7 @@ function App() {
             <Route path={PREPOSITION_LE_RESOURCE_PATH} element={<PrepositionLe/>}/>
 
             {/* Idioms */}
+            <Route path={IDIOM_I_AM_RESOURCE_PATH} element={<IdiomIAm/>}/>
             <Route path={IDIOM_IT_IS_IN_ME_RESOURCE_PATH} element={<IdiomItIsInMe/>}/>
             <Route path={IDIOM_IT_IS_ON_ME_RESOURCE_PATH} element={<IdiomItIsOnMe/>}/>
             <Route path={IDIOM_I_AM_IN_MY_RESOURCE_PATH} element={<IdiomIAmInMy/>}/>

@@ -8,6 +8,7 @@ import { NavItem } from '../component/navigation/nav-item';
 import { PrepositionAnnInlineNav } from '../grammar/preposition/preposition-ann';
 import { NavList } from '../component/navigation/nav-list';
 import { IdiomItIsInMeNavItem } from './idiom-it-is-in-me';
+import { IdiomIAmNavItem } from './idiom-i-am';
 
 export const IDIOM_I_AM_IN_MY_RESOURCE_PATH = buildIdiomPath('tha_mi_nam_thidsear');
 
@@ -81,6 +82,7 @@ export function IdiomIAmInMy() {
             </p>
             <p>
                 <NavList>
+                    <IdiomIAmNavItem/>
                     <IdiomItIsInMeNavItem/>
                 </NavList>
             </p>
